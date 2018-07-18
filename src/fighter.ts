@@ -24,16 +24,16 @@ export default class Fighter implements FighterInterface {
         console.log(`${this.name} health: ${this.health}`);
     }
 
-    hit(enemy: any, point: number) {
-        let damage = point * this.power;
+    hit(enemy: Fighter, point: number) {
+        let damage: number = point * this.power;
         enemy.setDamage(damage);
     }
 
-    knockout(enemy: any) {
+    knockout(enemy: Fighter) {
         console.log(`${enemy.name} is in knockout`);
         return new Promise(resolve => {
             setTimeout(() => {
-                resolve('time is over');
+                resolve('Time is over');
             }, 500);
         });
     }

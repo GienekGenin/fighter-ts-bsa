@@ -5,9 +5,9 @@ export default class ImprovedFighter extends Fighter {
         super(name, power, health);
     }
 
-    doubleHit(enemy: any, point: number) {
+    doubleHit(enemy: Fighter, point: number) {
         console.log(`${enemy.name} пропускает сочную двоечку от ${this.name}`);
-        let doublePoint = point * 2;
+        let doublePoint: number = point * 2;
         super.hit(enemy, doublePoint);
     }
 }
