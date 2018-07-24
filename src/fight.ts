@@ -1,4 +1,7 @@
-export default async function fight(fighter: any, improvedFighter: any, ...point: any[]) {
+import Fighter from './fighter';
+import ImprovedFighter from './improvedFighter';
+
+export default async function fight(fighter: Fighter, improvedFighter: ImprovedFighter, ...point: number[]) {
     while (fighter.health > 0 || improvedFighter.health > 0) {
 
         for (let value of point) {

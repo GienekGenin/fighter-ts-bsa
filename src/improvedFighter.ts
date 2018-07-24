@@ -1,6 +1,10 @@
 import Fighter from './fighter';
 
-export default class ImprovedFighter extends Fighter {
+export interface ImprovedFighterInterface {
+    doubleHit: (enemy: Fighter, point: number) => void;
+}
+
+export default class ImprovedFighter extends Fighter implements ImprovedFighterInterface {
     constructor(name = 'ImprovedFighter', power = 10, health = 1000) {
         super(name, power, health);
     }

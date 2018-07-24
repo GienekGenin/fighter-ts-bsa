@@ -2,6 +2,9 @@ export interface FighterInterface {
     name: string;
     power: number;
     health: number;
+    setDamage: (damage: number) => void;
+    hit: (enemy: Fighter, point: number) => void;
+    knockout: (enemy: Fighter) => void;
 }
 
 export default class Fighter implements FighterInterface {
